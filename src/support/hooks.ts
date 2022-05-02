@@ -1,6 +1,6 @@
 import global from "../types/globalthis";
 import { chromium } from "@playwright/test";
-import { setDefaultTimeout,BeforeAll,AfterAll,Before,World,After, Status } from "@cucumber/cucumber";
+import { setDefaultTimeout,BeforeAll,AfterAll,Before,World,After,AfterStep, Status } from "@cucumber/cucumber";
 import { Env } from "./enviroments";
 
 setDefaultTimeout(60*10000);
@@ -20,7 +20,7 @@ Before({tags: "@ignore"},async function (){
 Before(async () =>{
     global.context.clearCookies();
 })
-After(async function(this: World, scenario)  {
+AfterStep(async function(this: World, scenario)  {
     if(
         scenario.result?.status === Status.FAILED || scenario.result?.status === Status.PASSED
 

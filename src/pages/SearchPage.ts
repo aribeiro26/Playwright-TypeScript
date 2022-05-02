@@ -16,12 +16,8 @@ export default class SearchPage extends TestFunctions {
     }
     async FindValidate() {
         
-        await this.Test(el.FIRST_ELEMENT).ValidateElementExist();
-        await this.Test(el.FIRST_ELEMENT).ExecuteClick();
-        this.Test('document.title','Capodarte | Loja Oficial | Novidades, Sapatos, Bolsas e Muito Mais').ValidateText()
-
-        await this.Test().WaiLoadPage()
-
-        await this.Test(el.CAPODARTE_URL).ValidateUrl()
+        await this.Test(el.LINK_CAPO).ValidateElementExist();
+        await this.Test(el.LINK_CAPO).ExecuteClick();
+        await this.Test().WaiLoadPage()        
     }
 }

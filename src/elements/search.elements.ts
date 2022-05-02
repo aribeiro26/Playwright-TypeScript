@@ -1,7 +1,7 @@
 enum searchelements {
     INPUT_SEARCH = "[class^='gLFyf'][title='Pesquisar']",
-    FIRST_ELEMENT = '[data-text-ad="1"]',
-    CAPODARTE_URL = 'https://www.capodarte.com.br/'
+    LINK_CAPO = '[data-pcu^="https://www.capo"]',
+    CAPODARTE_URL = 'https://www.capodarte.com.br'
     
 }
 
