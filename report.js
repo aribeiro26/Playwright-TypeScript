@@ -5,7 +5,7 @@ const options ={
      output:'report/cucumber-html-report.html',
      screenshotsDirectory: 'test-results/',
      reportSuiteAsScenaros:true,
-     launchReport:false,
+     launchReport:true,
      scenarioTimestamp: true,
 }
 reporter.generate(options)
