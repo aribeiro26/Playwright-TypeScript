@@ -31,5 +31,6 @@ ARG CACHEBUST=1
 RUN echo $CACHEBUST && npx playwright install
 
 # Comando para executar os testes com o npm
-CMD sh -c "npm run test && node report.js && cat report/report.json | npx cucumber-junit > report/junitreport.xml"
+CMD sh -c "npm run test ; node report.js && cat report/report.json | npx cucumber-junit > report/junitreport.xml"
+
 
