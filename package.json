@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "report": "open ./report/cucumber-html-report.html",
-        "test": "cross-env NODE_ENV=local ./node_modules/.bin/cucumber-js --tags '@Search' --parallel 1 -f json:report/report.json && node report.js && cat report/report.json | npx cucumber-junit > report/junitreport.xml"
+        "test": "mkdir -p report;cross-env NODE_ENV=local ./node_modules/.bin/cucumber-js --tags '@Search' --parallel 1 -f json:report/report.json && node report.js && cat report/report.json | npx cucumber-junit > report/junitreport.xml"
     },
     "keywords": [],
     "author": "",

@@ -9,6 +9,16 @@ npm i       (Instalação de dependências)
 npm start   (Inicia a aplicação)
 ```
 
+### Docker
+
+```
+sudo docker build -t playwright-docker .
+docker run --rm -it -v $(pwd)/reports:/usr/src/app/report playwright-docker ## Executar e pegar report
+
+docker run --rm -it -v $(pwd)/reports:/usr/src/app/reports playwright-docker /bin/bash
+npm run test # // para debug
+```
+
 # Colaboradores
 
 | Desenvolvedor                                |                                                                            Thumbnail |
