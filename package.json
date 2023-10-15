@@ -4,8 +4,8 @@
     "description": "Playwright TypeScript",
     "scripts": {
         "report": "node src/utils/ExecReport.js",       
-        "teste": "./node_modules/.bin/cross-env RETRY=0 DEV=true DESKTOP_ONLY=true RESPONSIVE_ONLY=false NODE_ENV=local ENVA='' ENVB='' PARALLEL=1 TAGS=@Search BRWS='chrome' DEVICE='iPhone 11' node src/utils/app.js",
-        "test": "mkdir -p report;cross-env NODE_ENV=local ./node_modules/.bin/cucumber-js --tags '@Search' --parallel 1 -f json:report/report.json && node report.js && cat report/report.json | npx cucumber-junit > report/junitreport.xml"
+        "test": "./node_modules/.bin/cross-env RETRY=0 DEV=true DESKTOP_ONLY=true RESPONSIVE_ONLY=false NODE_ENV=local ENVA='' ENVB='' PARALLEL=1 TAGS=@Search BRWS='chrome' DEVICE='iPhone 11' node src/utils/app.js",
+        "teste": "mkdir -p report;cross-env NODE_ENV=local ./node_modules/.bin/cucumber-js --tags '@Search' --parallel 1 -f json:report/report.json && node report.js && cat report/report.json | npx cucumber-junit > report/junitreport.xml"
     },
     "keywords": [
         "E2E",

@@ -1,8 +1,7 @@
 import el from "../elements/elements.json"
-import TestFunctions from "../basepage/testFunctions"
+import TestFunctions from "../basepage/TestFunctions"
 
 export default class SearchPage extends TestFunctions {
-    
     async Find(text: string) {
         await this.TypeText(el.searchelements.INPUT_SEARCH, {}, text)
         await this.KeyBoard("", "Enter")

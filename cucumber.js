@@ -1,5 +1,5 @@
 const common = `
---require src/support/hooks.ts
+--require src/hooks/hooks.ts
 --require src/steps/**/*.ts
 --require-module ts-node/register
 --require src**/*.ts
