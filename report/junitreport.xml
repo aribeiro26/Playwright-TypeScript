@@ -1,0 +1,12 @@
+<testsuites>
+    <testsuite name="validar-pesquisa-google;realizar-a-busca-no-goodle" tests="4" failures="0" errors="0" skipped="0" timestamp="Sun, 15 Oct 2023 04:44:43 GMT" time="3.627257799">
+        <testcase name="Beforeundefined" classname="validar-pesquisa-google;realizar-a-busca-no-goodle" time="0.0037516">
+        </testcase>
+        <testcase name="Dado Estar na pagina Google" classname="validar-pesquisa-google;realizar-a-busca-no-goodle" time="2.101331058">
+        </testcase>
+        <testcase name="Quando Pesquisar &quot;capodarte&quot; no campo de busca" classname="validar-pesquisa-google;realizar-a-busca-no-goodle" time="0.916898425">
+        </testcase>
+        <testcase name="Então Localizar o primeiro resultado da busca" classname="validar-pesquisa-google;realizar-a-busca-no-goodle" time="0.605276716">
+        </testcase>
+    </testsuite>
+</testsuites>

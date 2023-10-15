@@ -9,7 +9,7 @@ const common = `
 --format summary
 --format progress-bar
 --format @cucumber/pretty-formatter
---publish-quiet
+
 `;
 
 module.exports = {
