@@ -1,0 +1,14 @@
+{
+    "hml": {
+        "server": "https://www.google.com.br/",
+        "headless": true,
+        "envA": "",
+        "envB": ""
+    },
+    "local": {
+        "server": "https://www.google.com.br/",
+        "headless": false,
+        "envA": "",
+        "envB": ""
+    }
+}

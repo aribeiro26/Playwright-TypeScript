@@ -1,18 +1,20 @@
-import global from "../../types/globalthis";
-import { World,Then } from "@cucumber/cucumber";
-import {join} from "path";
+import global from "../../types/globalthis"
+import { Given, Then, World } from "@cucumber/cucumber"
+import { join } from "path"
+import { Commons } from "../../support/commons"
+const commons = new Commons()
 
-Then('Snapshot {string}', async function (this: World, name: string) {
-
-    await global.page.screenshot({path: join('test-results', `${name}.png`)})    
+Given(/Estar na pagina Google/, async () => {
+    await commons.GoHome()
 })
 
-Then('Snapshot', async function (this: World) {
-    const image = await global.page.screenshot();
-    image && (await this.attach(image, "image/png"))
-    
+Then("Snapshot {string}", async function (this: World, name: string) {
+    await global.page.screenshot({ path: join("test-results", `${name}.png`) })
 })
-
-Then('debug',async function (){
-    debugger;    
-});
+Then("Snapshot", async function () {
+    const image = await global.page.screenshot()
+    image && (await global.B.attach(image, "image/png"))
+})
+Then("debug", async function () {
+    debugger
+})
