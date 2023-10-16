@@ -6,9 +6,9 @@ export default class SearchPage extends TestFunctions {
         await this.TypeText(el.searchelements.INPUT_SEARCH, {}, text)
         await this.KeyBoard("", "Enter")
     }
-    async FindValidate() {
-        await this.ValidateElementExist(el.searchelements.LINK_CAPO)
-        await this.Executeclick(el.searchelements.LINK_CAPO)
+    async FindValidate(text: string) {
+        await this.ValidateElementExist(`[data-pcu^='https://www.${text}']`)
+        await this.Executeclick(`[data-pcu^='https://www.${text}']`)
         await this.WaitLoadPage()
     }
 }

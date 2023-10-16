@@ -7,6 +7,6 @@ When("Pesquisar {string} no campo de busca", async text => {
     await search.Find(text)
 })
 
-Then(/Localizar o primeiro resultado da busca/, async () => {
-    await search.FindValidate()
+Then("Localizar o primeiro resultado da busca {string}", async text => {
+    await search.FindValidate(text)
 })
