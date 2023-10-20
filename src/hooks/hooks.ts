@@ -93,7 +93,7 @@ After(async function (this: World, scenario: ITestCaseHookParameter) {
         if (videoPath) {
             const video = fs.readFileSync(videoPath)
             const videoElement = `<video width="340" height="400" controls><source type="video/webm" src="data:video/webm;base64,${video.toString(
-                "base64"
+                "base64",
             )}"></video>`
             await this.attach(videoElement, "text/html")
         }

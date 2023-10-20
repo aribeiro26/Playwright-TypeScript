@@ -198,9 +198,8 @@ const ExecDesktopOnly = async () => {
         console.log(`Script reportDesktopOnly.js executado com sucesso`)
     } catch (error) {
         console.error(`Erro ao executar o script do Cucumber: \n ${error} \n\n`)
-    } finally {
         await execAsync(Executions.Desktop.Only.DesktopGeneratereportOnly)
-    }
+    } 
 }
 const ResponsiveOnly = async () => {
     const ChildB = exec(
