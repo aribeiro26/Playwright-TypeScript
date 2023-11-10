@@ -1,8 +1,8 @@
 {
     "compilerOptions": {
         "target": "esnext",
-        "module": "commonjs",
-        "moduleResolution": "Node10",
+        "module": "commonjs", 
+        "moduleResolution": "node", 
         "strict": true,
         "noImplicitAny": true,
         "strictNullChecks": true,
@@ -12,5 +12,5 @@
         "emitDecoratorMetadata": true,
         "types": ["./src/types/global.d.ts"]
     },
-    "include": ["./src/**/*", "./src/types/global.d.ts"]
+    "include": ["./src/**/*", "./src/types/global.d.ts", "app.cjs", "app.js"]
 }

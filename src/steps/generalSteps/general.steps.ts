@@ -1,7 +1,7 @@
 import { Given, Then, World } from "@cucumber/cucumber"
 import { join } from "path"
 import { Commons } from "../../support/commons"
-import playLighthouse from"../../loaders/playLighthouse"
+import {playLighthouse} from "../../utils/lighthouse/playLighthouse"
 
 const commons = new Commons()
 
