@@ -16,7 +16,7 @@ const browserOptions: LaunchOptions = {
         "--disable-features=site-per-process",
         "--disable-setuid-sandbox",
         "--no-sandbox",
-        "--max_old_space_size=6144",
+        "--max_old_space_size=6144"
     ],
 }
 /**

@@ -1,4 +1,3 @@
-import global from "../types/globalthis"
 import fs from "fs"
 import fsystem from "fs/promises"
 const path = require("path")
@@ -28,6 +27,7 @@ setDefaultTimeout(60 * 10000)
 BeforeAll(async () => {
     await CreateDirectory("report")
     await GetBrowser()
+   
 })
 /**
  * Executa ações antes de um teste especificado.

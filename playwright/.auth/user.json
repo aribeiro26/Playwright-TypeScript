@@ -1,31 +1,21 @@
 {
   "cookies": [
     {
-      "name": "1P_JAR",
-      "value": "2023-10-16-07",
-      "domain": ".google.com.br",
-      "path": "/",
-      "expires": 1700043615.518823,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
       "name": "AEC",
-      "value": "Ackid1QJs5OWDR42BtoQAdwO2hUjX1A32-IQyXjglU4kLZuB0nIkFgtn7w",
+      "value": "Ackid1Rcn2pzUjri9_hHhF3e9075UW5oGQorHkVWebgd52avXqqo6ItH-gY",
       "domain": ".google.com.br",
       "path": "/",
-      "expires": 1713003148.542968,
+      "expires": 1715102607.207232,
       "httpOnly": true,
       "secure": true,
       "sameSite": "Lax"
     },
     {
       "name": "NID",
-      "value": "511=Nx5WUMdtyi8D4r6-RUlxxsxO-8ETSHYVZO6tjc_3Ary_1vHzWtypRg3NqpcjxRqR8rYUpre88xN3_G4r3DiE_9vRQzVGruSSRHtIsQh06D6WSpPUfPX_33u7bPglCH4GMHq6PvFJ67Ua9SyzbfHwF_u0WI0af4V-QMSeF_qPHNYFViSJB1hqSQ",
+      "value": "511=gkwjA21j7q5wGFfBtL0kEgzPTRbKeBiD1-ZeW0ZtzyEkqqHA_P7jnB7ZJX5Vkzv0yiGDd6VYesvHYVsHEf3cKVwcafBZBKAx_n93KQyJ0ECYlhNoapK18lU3BHQS4B54dhDX-ObyKrB9hSjI2wRqCdkYNk4xp173RnnnutUmndUULI-YvFbOD0o",
       "domain": ".google.com.br",
       "path": "/",
-      "expires": 1713262348.521903,
+      "expires": 1715361807.958683,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
@@ -35,28 +25,38 @@
       "value": "19037049-1:",
       "domain": ".google.com.br",
       "path": "/",
-      "expires": 1700043149,
+      "expires": 1702142608,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "OTZ",
-      "value": "7252453_68_64_73560_68_416340",
+      "value": "7287443_68_64_73560_68_416340",
       "domain": "ogs.google.com.br",
       "path": "/",
-      "expires": 1700043150,
+      "expires": 1702142608,
       "httpOnly": false,
       "secure": true,
       "sameSite": "Lax"
     },
     {
       "name": "NID",
-      "value": "511=VjORvLHZ3FUFGocQqdHxBj8EKeytDPwYbMwFQnT2TgrkX9omx-k-7aUio-dHtJ-hhn5LDOHb5io_GZPDOf1xcMmwiGouwLOwJ9ym70S5uMoiMAlalDW7WvSelZ26xnVVzbEmiwod4dUbrOHVPzYIepCUAgM7QU6AOleQ9qBj110",
+      "value": "511=J7YqeIAg9BJykWpVodhqiYTtAmhv5qa4i0_CATazMOT1LooPwzTpikbWyb1f_FWviYaBE4yim6jGux-OPY0Mf7lvwn20Qv8SqamvK8coTtmICpfkcZ3FLNkqsbfu00xo2Qy6YOJMXjbqtDK9nS8vqaqQBM6crpaV2-VyNwVFkNI",
       "domain": ".google.com",
       "path": "/",
-      "expires": 1713262350.379158,
+      "expires": 1715361808.887684,
       "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "1P_JAR",
+      "value": "2023-11-10-05",
+      "domain": ".google.com.br",
+      "path": "/",
+      "expires": 1702185267.089274,
+      "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     }
@@ -67,7 +67,7 @@
       "localStorage": [
         {
           "name": "sb_wiz.zpc.gws-wiz.",
-          "value": "{\"0\":[[\"carolina mendes israel\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"campus party amazonia\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"estrela de davi em berlim\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"acidente moto morro reuter hoje\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"acidente juliana baldi\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"furto metralhadoras exercito\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"atlético pb\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"carlos augusto selecao\",46,[3,143,357,362,396],{\"lm\":[],\"zf\":33,\"zh\":\"carlos augusto selecao\",\"zi\":\"Carlos Augusto Zopolato Neves — Jogador de futebol brasileiro\",\"zl\":8,\"zp\":{\"gs_ssp\":\"eJzj4tVP1zc0TDc2iDcqLDI2YPQSS04syskvVkgsTS8tLslXKE7NSU1OzAcA6lQM6Q\"},\"zs\":\"data:image/jpeg;base64,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\"}],[\"luta ufc michel pereira\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"luta ufc edson barboza\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}]],\"1\":{\"ag\":{\"a\":{\"8\":[\"Pesquisas em alta\"]}},\"q\":\"eKqblavYN_FguApdQfm6XPui6QQ\"}}"
+          "value": "{\"0\":[[\"flávio bolsonaro\",46,[3,143,357,455,362,396],{\"lm\":[],\"zf\":33,\"zh\":\"Flávio Bolsonaro\",\"zi\":\"Deputado estadual do Rio de Janeiro\",\"zl\":8,\"zp\":{\"gs_ssp\":\"eJzj4tZP1zc0MipIyShMMWD0EkzLObywLDNfISk_pzg_L7EoHwCs9wuA\"},\"zs\":\"data:image/jpeg;base64,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\"}],[\"vetos marco temporal\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"inpe desmatamento amazônia\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"curitiba cidade inteligente\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"aeri3\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"rockstar games trailer gta 6\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"minerva beef3 noticias\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"gabriel moscardo\",46,[3,143,357,362,396],{\"lm\":[],\"zf\":33,\"zh\":\"Gabriel Moscardo\",\"zi\":\"Jogador de futebol brasileiro\",\"zl\":8,\"zp\":{\"gs_ssp\":\"eJzj4tVP1zc0LKnISylKySs3YPQSSE9MKspMzVHIzS9OTixKyQcAu2sLkQ\"},\"zs\":\"data:image/jpeg;base64,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\"}],[\"ingressos grêmio x corinthians\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"botafogo tiquinho soares\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}]],\"1\":{\"ag\":{\"a\":{\"8\":[\"Pesquisas em alta\"]}},\"q\":\"u7M74OdGPqXfcOpmMli_tCY8i04\"}}"
         }
       ]
     }

@@ -1,7 +1,8 @@
-import global from "../../types/globalthis"
 import { Given, Then, World } from "@cucumber/cucumber"
 import { join } from "path"
 import { Commons } from "../../support/commons"
+import {playLighthouse} from "../../utils/lighthouse/playLighthouse"
+
 const commons = new Commons()
 
 Given(/Estar na pagina Google/, async () => {
@@ -17,4 +18,7 @@ Then("Snapshot", async function () {
 })
 Then("debug", async function () {
     debugger
+})
+Then("Execute analise lighthouse {string}", async function (name: string) {
+    await playLighthouse(name)
 })
