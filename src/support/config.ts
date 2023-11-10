@@ -54,8 +54,11 @@ const getBrowserContextOptions = (): BrowserContextOptions => {
         locale: locale.locale,
     }
 }
+export const visualcompConfig = {
+    IMG_THRESHOLD: { threshold: 0.4 },
+}
 export const config = {
     browserOptions,
     getBrowserContextOptions,
-    browserContextOptions: getBrowserContextOptions(),
+    browserContextOptions: getBrowserContextOptions(),visualcompConfig
 }

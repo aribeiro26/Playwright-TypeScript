@@ -13,7 +13,7 @@ import {
     After,
 } from "@cucumber/cucumber"
 const dotenv = require("dotenv")
-import CreateDirectory from "../utils/CreateDirectory"
+import CreateDirectory from "../utils/create_directory/CreateDirectory"
 import GetBrowser, { browserTypes, browserType } from "./getBrowser"
 const { execSync } = require("child_process")
 dotenv.config()

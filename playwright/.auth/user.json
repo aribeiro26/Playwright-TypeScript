@@ -1,0 +1,75 @@
+{
+  "cookies": [
+    {
+      "name": "1P_JAR",
+      "value": "2023-11-10-14",
+      "domain": ".google.com.br",
+      "path": "/",
+      "expires": 1702219478.060353,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "AEC",
+      "value": "Ackid1Q9U8rahCOyjdo9_OcExu4tx-Rs4CJYcaT8wbv-7bcFF_rkhWY2fnA",
+      "domain": ".google.com.br",
+      "path": "/",
+      "expires": 1715178076.95043,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "NID",
+      "value": "511=WiIvZAvMRF6j7qF6qAfh2LZJCR02Ghp_vd0wIM6P_loTx8JLAW38EjDmhWeck_HYzKL-fak1O-cxNxSvZhcQ-8bLrHXuZpmRuIeINreTBFboIyF0ABiKslo5TmvsBbfoh8eirkhdCP6ZLwAwBTHdpKe_Celk1Uc7QOfAh7UxueEwWWbZ2GpXlaeD",
+      "domain": ".google.com.br",
+      "path": "/",
+      "expires": 1715437276.868074,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "OGPC",
+      "value": "19037049-1:",
+      "domain": ".google.com.br",
+      "path": "/",
+      "expires": 1702218077,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "OTZ",
+      "value": "7288701_68_64_73560_68_416340",
+      "domain": "ogs.google.com.br",
+      "path": "/",
+      "expires": 1702218078,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "NID",
+      "value": "511=theN9w6_maRqIQLv50mvuuFgIc5hLwsoU51ZnqLU9w21L7sz_IBn7911jZuFJSJrDabNfq7GLZnsXVZptTTT8wmpTFrS0IKGvr2x1U2oGyOSCKYIe8QFD18Vj6_kUmD4Dsok2pFSy0HAYP7l4uu25OpiLnccs-bvZ5BYU-c6QOU",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1715437278.527893,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://www.google.com.br",
+      "localStorage": [
+        {
+          "name": "sb_wiz.zpc.gws-wiz.",
+          "value": "{\"0\":[[\"fla flu sabado\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"adolescente sequestrado em caxias\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"alcides franciscato bauru\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"ciça todas as flores\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"black friday mc donalds\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"passe livre estudantil fortaleza\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"crianca esquecida em creche paranoa\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"minerva beef3 noticias\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"aeri3\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"pedro certezas\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}]],\"1\":{\"ag\":{\"a\":{\"8\":[\"Pesquisas em alta\"]}},\"q\":\"MSNp_6loX6Imzz-aBSQp86991tg\"}}"
+        }
+      ]
+    }
+  ]
+}

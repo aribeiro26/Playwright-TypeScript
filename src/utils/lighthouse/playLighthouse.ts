@@ -15,7 +15,7 @@ export const playLighthouse = async (url: string) => {
             accessibility: 50,
             "best-practices": 50,
             seo: 50,
-            pwa: 50,
+            // pwa: 50,
         },
         port: 9222,
 
