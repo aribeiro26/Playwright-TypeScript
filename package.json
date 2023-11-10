@@ -2,9 +2,10 @@
     "name": "playwrighttypescript",
     "version": "2.0.0",
     "description": "Playwright TypeScript",
+
     "scripts": {
         "report": "node src/utils/ExecReport.js",
-        "test": "./node_modules/.bin/cross-env RETRY=0 DEV=true DESKTOP_ONLY=true RESPONSIVE_ONLY=false NODE_ENV=local ENVA='' ENVB='' PARALLEL=1 TAGS=@Search BRWS='chrome' DEVICE='iPhone 11' node src/utils/app.js"
+        "test": "./node_modules/.bin/cross-env RETRY=0 DEV=true DESKTOP_ONLY=true RESPONSIVE_ONLY=false NODE_ENV=local ENVA='' ENVB='' PARALLEL=1 TAGS=@Search BRWS='chrome' DEVICE='iPhone 11' node ./app.js"
     },
     "keywords": [
         "E2E",
@@ -29,6 +30,8 @@
         "cucumber-pretty": "^6.0.1",
         "cucumberjs-junitxml": "^1.0.0",
         "dotenv": "^16.3.1",
+        "lighthouse": "^9.6.8",
+        "playwright-lighthouse": "^3.0.0",
         "pixelmatch": "5.3.0",
         "pngjs": "7.0.0",
         "ts-node": "^10.9.1",

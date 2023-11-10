@@ -1,6 +1,7 @@
-import global from "../../types/globalthis"
 import { Given, Then, World, ITestCaseHookParameter } from "@cucumber/cucumber"
 import { Commons } from "../../support/commons"
+import {playLighthouse} from "../../utils/lighthouse/playLighthouse"
+
 const commons = new Commons()
 import {
     ICustomWorld,
@@ -38,3 +39,6 @@ Then(
         await compareToBaseImage(this, name, screenshot as Buffer)
     },
 )
+Then("Execute analise lighthouse {string}", async function (name: string) {
+    await playLighthouse(name)
+})

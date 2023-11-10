@@ -1,4 +1,3 @@
-import global from "../types/globalthis"
 import {
     chromium,
     firefox,

@@ -1,4 +1,4 @@
-const { exec } = require("child_process")
+const { exec } = require ("child_process");
 
 function extractErrorDetails(output) {
     const logsStartKeyword = "====== logs ======"
@@ -174,17 +174,7 @@ const Enviroments = {
     DESKTOP_ONLY: (String = process.env.DESKTOP_ONLY || "false"),
     BROWSER: (String = process.env.BRWS || "chrome"),
 }
-const CreateDirectory = async () => {
-    exec(Executions.CreateDirectory, (error, stdout, stderr) => {
-        if (error) {
-            console.error(
-                `Erro ao executar o Criacao de diretório de report: ${error}`
-            )
-            return
-        }
-        console.log(`Diretório de report criado sucesso`)
-    })
-}
+
 const ExecDesktopOnly = async () => {
     process.env.DEVICE = undefined
     try {
@@ -380,7 +370,7 @@ async function MergeReport() {
 }
 
 const RunTests = async () => {
-    await CreateDirectory()
+    
     console.log("Iniciando Testes...\n")
 
     if (
