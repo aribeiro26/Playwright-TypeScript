@@ -1,5 +1,3 @@
-// Added by https://github.com/ortsevlised
-
 import { visualcompConfig } from '../support/config';
 import { ensureFile, pathExists } from 'fs-extra';
 import pixelmatch from 'pixelmatch';
