@@ -1,31 +1,21 @@
 {
   "cookies": [
     {
-      "name": "1P_JAR",
-      "value": "2023-10-16-07",
-      "domain": ".google.com.br",
-      "path": "/",
-      "expires": 1700043615.518823,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
       "name": "AEC",
-      "value": "Ackid1QJs5OWDR42BtoQAdwO2hUjX1A32-IQyXjglU4kLZuB0nIkFgtn7w",
+      "value": "Ackid1Rcn2pzUjri9_hHhF3e9075UW5oGQorHkVWebgd52avXqqo6ItH-gY",
       "domain": ".google.com.br",
       "path": "/",
-      "expires": 1713003148.542968,
+      "expires": 1715102607.207232,
       "httpOnly": true,
       "secure": true,
       "sameSite": "Lax"
     },
     {
       "name": "NID",
-      "value": "511=Nx5WUMdtyi8D4r6-RUlxxsxO-8ETSHYVZO6tjc_3Ary_1vHzWtypRg3NqpcjxRqR8rYUpre88xN3_G4r3DiE_9vRQzVGruSSRHtIsQh06D6WSpPUfPX_33u7bPglCH4GMHq6PvFJ67Ua9SyzbfHwF_u0WI0af4V-QMSeF_qPHNYFViSJB1hqSQ",
+      "value": "511=gkwjA21j7q5wGFfBtL0kEgzPTRbKeBiD1-ZeW0ZtzyEkqqHA_P7jnB7ZJX5Vkzv0yiGDd6VYesvHYVsHEf3cKVwcafBZBKAx_n93KQyJ0ECYlhNoapK18lU3BHQS4B54dhDX-ObyKrB9hSjI2wRqCdkYNk4xp173RnnnutUmndUULI-YvFbOD0o",
       "domain": ".google.com.br",
       "path": "/",
-      "expires": 1713262348.521903,
+      "expires": 1715361807.958683,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
@@ -35,28 +25,38 @@
       "value": "19037049-1:",
       "domain": ".google.com.br",
       "path": "/",
-      "expires": 1700043149,
+      "expires": 1702142608,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "OTZ",
-      "value": "7252453_68_64_73560_68_416340",
+      "value": "7287443_68_64_73560_68_416340",
       "domain": "ogs.google.com.br",
       "path": "/",
-      "expires": 1700043150,
+      "expires": 1702142608,
       "httpOnly": false,
       "secure": true,
       "sameSite": "Lax"
     },
     {
       "name": "NID",
-      "value": "511=VjORvLHZ3FUFGocQqdHxBj8EKeytDPwYbMwFQnT2TgrkX9omx-k-7aUio-dHtJ-hhn5LDOHb5io_GZPDOf1xcMmwiGouwLOwJ9ym70S5uMoiMAlalDW7WvSelZ26xnVVzbEmiwod4dUbrOHVPzYIepCUAgM7QU6AOleQ9qBj110",
+      "value": "511=J7YqeIAg9BJykWpVodhqiYTtAmhv5qa4i0_CATazMOT1LooPwzTpikbWyb1f_FWviYaBE4yim6jGux-OPY0Mf7lvwn20Qv8SqamvK8coTtmICpfkcZ3FLNkqsbfu00xo2Qy6YOJMXjbqtDK9nS8vqaqQBM6crpaV2-VyNwVFkNI",
       "domain": ".google.com",
       "path": "/",
-      "expires": 1713262350.379158,
+      "expires": 1715361808.887684,
       "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "1P_JAR",
+      "value": "2023-11-10-02",
+      "domain": ".google.com.br",
+      "path": "/",
+      "expires": 1702175205.737405,
+      "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     }
@@ -67,7 +67,7 @@
       "localStorage": [
         {
           "name": "sb_wiz.zpc.gws-wiz.",
-          "value": "{\"0\":[[\"carolina mendes israel\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"campus party amazonia\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"estrela de davi em berlim\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"acidente moto morro reuter hoje\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"acidente juliana baldi\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"furto metralhadoras exercito\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"atlético pb\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"carlos augusto selecao\",46,[3,143,357,362,396],{\"lm\":[],\"zf\":33,\"zh\":\"carlos augusto selecao\",\"zi\":\"Carlos Augusto Zopolato Neves — Jogador de futebol brasileiro\",\"zl\":8,\"zp\":{\"gs_ssp\":\"eJzj4tVP1zc0TDc2iDcqLDI2YPQSS04syskvVkgsTS8tLslXKE7NSU1OzAcA6lQM6Q\"},\"zs\":\"data:image/jpeg;base64,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\"}],[\"luta ufc michel pereira\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"luta ufc edson barboza\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}]],\"1\":{\"ag\":{\"a\":{\"8\":[\"Pesquisas em alta\"]}},\"q\":\"eKqblavYN_FguApdQfm6XPui6QQ\"}}"
+          "value": "{\"0\":[[\"greve comcap florianopolis\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"dra raphaela ferraz anestesiologista\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"el niño 2024\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"ingressos seleção brasileira x argentina\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"brasileiros gaza israel\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"bradesco\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"ações bbas3 dividendos\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"wallace\",46,[3,143,357,362,396],{\"lm\":[],\"zf\":33,\"zh\":\"Wallace de Souza\",\"zi\":\"Jogador de voleibol brasileiro\",\"zl\":8,\"zp\":{\"gs_ssp\":\"eJzj4tLP1TfILkuzLM41YPRiL0_MyUlMTgUASCgGyw\"},\"zs\":\"data:image/jpeg;base64,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\"}],[\"rockstar games trailer gta 6\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"gabriel moscardo chelsea\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}]],\"1\":{\"ag\":{\"a\":{\"8\":[\"Pesquisas em alta\"]}},\"q\":\"1rBwZtpx68GzQcSpCMYaPjSi5DU\"}}"
         }
       ]
     }

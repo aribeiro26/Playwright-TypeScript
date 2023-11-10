@@ -42,6 +42,7 @@
         "es5-ext": "^0.10.62",
         "eslint": "^8.51.0",
         "faker-br": "^0.4.1",
+        "lighthouse": "^11.3.0",
         "open": "^9.1.0",
         "tough-cookie": "^4.1.3"
     }
