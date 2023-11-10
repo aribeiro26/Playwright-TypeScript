@@ -5,7 +5,7 @@ const common = `
 --require src**/*.ts
 --format json:report/report.json
 --format message:report/report.ndjson
---format html:report/report.html
+--format html:report/cucumber.html
 --format summary
 --format progress-bar
 --format @cucumber/pretty-formatter

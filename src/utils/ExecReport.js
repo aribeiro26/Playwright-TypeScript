@@ -8,7 +8,7 @@ const exec = promisify(execCallback)
     try {
         let command
         if (platform() === "win32") {
-            command = "start .\\report\\cucumber-html-report.html"
+            command = "start .\\report\\cucumber.html"
         } else {
             command = "open ./report/cucumber.html"
         }

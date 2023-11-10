@@ -2,20 +2,20 @@
   "cookies": [
     {
       "name": "AEC",
-      "value": "Ackid1Rcn2pzUjri9_hHhF3e9075UW5oGQorHkVWebgd52avXqqo6ItH-gY",
+      "value": "Ackid1Rs7xEr0CQI7zbJjiLT6suU78VtPZbJpFnzMrdp08ehL6KVV8u5iQ",
       "domain": ".google.com.br",
       "path": "/",
-      "expires": 1715102607.207232,
+      "expires": 1715175019.362996,
       "httpOnly": true,
       "secure": true,
       "sameSite": "Lax"
     },
     {
       "name": "NID",
-      "value": "511=gkwjA21j7q5wGFfBtL0kEgzPTRbKeBiD1-ZeW0ZtzyEkqqHA_P7jnB7ZJX5Vkzv0yiGDd6VYesvHYVsHEf3cKVwcafBZBKAx_n93KQyJ0ECYlhNoapK18lU3BHQS4B54dhDX-ObyKrB9hSjI2wRqCdkYNk4xp173RnnnutUmndUULI-YvFbOD0o",
+      "value": "511=j2uWAblhRsIsIFd_VpMYGKqkPBAdyXbG0jEbqn1aqJBiBQduhPf9w5AYQ_AybXr8ZTv0EKu-b8MDjyk4m21Tqr0m07H25bviJPFc50bEz7EbZeOI4XnikWivwGFSJzxS5oNsHHOi5-m5Ys3aDDcpk1WrB2lWUi82QjD8hmjVCXyQXxq3RziM2bxC",
       "domain": ".google.com.br",
       "path": "/",
-      "expires": 1715361807.958683,
+      "expires": 1715434219.180847,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
@@ -25,37 +25,37 @@
       "value": "19037049-1:",
       "domain": ".google.com.br",
       "path": "/",
-      "expires": 1702142608,
+      "expires": 1702215020,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "OTZ",
-      "value": "7287443_68_64_73560_68_416340",
+      "value": "7288650_68_64_73560_68_416340",
       "domain": "ogs.google.com.br",
       "path": "/",
-      "expires": 1702142608,
+      "expires": 1702215020,
       "httpOnly": false,
       "secure": true,
       "sameSite": "Lax"
     },
     {
       "name": "NID",
-      "value": "511=J7YqeIAg9BJykWpVodhqiYTtAmhv5qa4i0_CATazMOT1LooPwzTpikbWyb1f_FWviYaBE4yim6jGux-OPY0Mf7lvwn20Qv8SqamvK8coTtmICpfkcZ3FLNkqsbfu00xo2Qy6YOJMXjbqtDK9nS8vqaqQBM6crpaV2-VyNwVFkNI",
+      "value": "511=WIEVR_GEAX6DAHhqZEsGSRSeAX9YOtxfODxn7GozYknNPRk1ZcSlRtMCiqpUby813oikS8T5ntqyI1hVuaQHeCHMHgYZ42meEdgMlDhp19v-Y83lNrFu88AwtVTyAb5_XtqZKdBOIpYlB9rbUHQ6C9Fpu85Af2etnQvZ29lTjDw",
       "domain": ".google.com",
       "path": "/",
-      "expires": 1715361808.887684,
+      "expires": 1715434944.815823,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "1P_JAR",
-      "value": "2023-11-10-05",
+      "value": "2023-11-10-14",
       "domain": ".google.com.br",
       "path": "/",
-      "expires": 1702185267.089274,
+      "expires": 1702217339.821128,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
@@ -67,7 +67,7 @@
       "localStorage": [
         {
           "name": "sb_wiz.zpc.gws-wiz.",
-          "value": "{\"0\":[[\"flávio bolsonaro\",46,[3,143,357,455,362,396],{\"lm\":[],\"zf\":33,\"zh\":\"Flávio Bolsonaro\",\"zi\":\"Deputado estadual do Rio de Janeiro\",\"zl\":8,\"zp\":{\"gs_ssp\":\"eJzj4tZP1zc0MipIyShMMWD0EkzLObywLDNfISk_pzg_L7EoHwCs9wuA\"},\"zs\":\"data:image/jpeg;base64,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\"}],[\"vetos marco temporal\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"inpe desmatamento amazônia\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"curitiba cidade inteligente\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"aeri3\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"rockstar games trailer gta 6\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"minerva beef3 noticias\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"gabriel moscardo\",46,[3,143,357,362,396],{\"lm\":[],\"zf\":33,\"zh\":\"Gabriel Moscardo\",\"zi\":\"Jogador de futebol brasileiro\",\"zl\":8,\"zp\":{\"gs_ssp\":\"eJzj4tVP1zc0LKnISylKySs3YPQSSE9MKspMzVHIzS9OTixKyQcAu2sLkQ\"},\"zs\":\"data:image/jpeg;base64,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\"}],[\"ingressos grêmio x corinthians\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"botafogo tiquinho soares\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}]],\"1\":{\"ag\":{\"a\":{\"8\":[\"Pesquisas em alta\"]}},\"q\":\"u7M74OdGPqXfcOpmMli_tCY8i04\"}}"
+          "value": "{\"0\":[[\"trailer gta 6 rockstar games\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"stf separação judicial divórcio\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"alcides franciscato bauru\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"minerva beef3 noticias\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"fluminense mundial\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"nova onda de calor no brasil\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"bradesco bbdc4\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"aeri3\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"curitiba cidade inteligente\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"petrobras petr4\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}]],\"1\":{\"ag\":{\"a\":{\"8\":[\"Pesquisas em alta\"]}},\"q\":\"Xk-D1EzKAQMRwYUMkqggS54xPew\"}}"
         }
       ]
     }

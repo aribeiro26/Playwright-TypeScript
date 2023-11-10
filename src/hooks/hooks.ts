@@ -27,7 +27,6 @@ setDefaultTimeout(60 * 10000)
 BeforeAll(async () => {
     await CreateDirectory("report")
     await GetBrowser()
-   
 })
 /**
  * Executa ações antes de um teste especificado.
@@ -84,21 +83,22 @@ AfterStep(async function (this: World, scenario: ITestCaseHookParameter) {
  * @param {ITestCaseHookParameter} scenario - O objeto ITestCaseHookParameter.
  * @returns {Promise<void>}
  */
+import { promisify } from 'util';  
+import { readFile } from 'fs';
 After(async function (this: World, scenario: ITestCaseHookParameter) {
     if (
         scenario.result?.status === Status.FAILED ||
         scenario.result?.status === Status.PASSED
     ) {
+        const video = await global.page.video()
         const videoPath = await global.page.video()?.path()
         if (videoPath) {
-            const video = fs.readFileSync(videoPath)
-            const videoElement = `<video width="340" height="400" controls><source type="video/webm" src="data:video/webm;base64,${video.toString(
-                "base64"
-            )}"></video>`
-            await this.attach(videoElement, "text/html")
+            const videoBuffer = await promisify(readFile)(videoPath)
+            video && (await this.attach(videoBuffer, "video/webm"))
         }
     }
 })
+
 /**
  * Executa ações após todos os testes.
  *

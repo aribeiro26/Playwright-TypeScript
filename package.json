@@ -2,7 +2,6 @@
     "name": "playwrighttypescript",
     "version": "2.0.0",
     "description": "Playwright TypeScript",
-
     "scripts": {
         "report": "node src/utils/ExecReport.js",
         "test": "./node_modules/.bin/cross-env RETRY=0 DEV=true DESKTOP_ONLY=true RESPONSIVE_ONLY=false NODE_ENV=local ENVA='' ENVB='' PARALLEL=1 TAGS=@Search BRWS='chrome' DEVICE='iPhone 11' node ./app.js"
@@ -40,8 +39,6 @@
         "@types/tough-cookie": "^4.0.3",
         "cat": "^0.2.0",
         "config": "^3.3.9",
-        "cucumber-html-report-generator": "^1.0.14",
-        "cucumber-html-reporter": "^6.0.0",
         "es5-ext": "^0.10.62",
         "eslint": "^8.51.0",
         "faker-br": "^0.4.1",

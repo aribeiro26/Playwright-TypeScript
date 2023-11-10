@@ -1,4 +1,4 @@
-const { exec } = require ("child_process");
+const { exec } = require("child_process")
 
 function extractErrorDetails(output) {
     const logsStartKeyword = "====== logs ======"
@@ -11,7 +11,7 @@ function extractErrorDetails(output) {
     const logsStartIndex = joinedOutput.indexOf(logsStartKeyword)
     const logsEndIndex = joinedOutput.indexOf(
         logsEndKeyword,
-        "=============================="
+        "==============================",
     )
     const errorReason = joinedOutput
         .slice(errorIndex + 2, logsStartIndex)
@@ -27,7 +27,7 @@ function extractErrorDetails(output) {
         "\n\n",
         "##vso[task.logissue type=error] Conteúdo do Erro ========= ",
         "##vso[task.logissue type = error]" + logs,
-        "\n\n"
+        "\n\n",
     )
 
     return { errorReason, logs }
@@ -55,11 +55,11 @@ function execAsync(command) {
                     console.log(
                         "##vso[task.logissue type=warning]  Possível solução",
                         "\n",
-                        "##vso[task.logissue type=warning]  https:playwright.com"
+                        "##vso[task.logissue type=warning]  https:playwright.com",
                     )
                     console.log(
                         "##vso[task.complete result=Failed;]DONE",
-                        "\n\n"
+                        "\n\n",
                     )
                 }
             }
@@ -73,7 +73,7 @@ function execAsync(command) {
         child.on("close", code => {
             if (code !== 0) {
                 const error = new Error(
-                    `Erro ao executar o comando: ${command}`
+                    `Erro ao executar o comando: ${command}`,
                 )
                 error.code = code
                 error.stdout = stdoutData
@@ -86,84 +86,7 @@ function execAsync(command) {
     })
 }
 
-const Executions = {
-    CreateDirectory: `./node_modules/.bin/ts-node src/utils/CreateDirectory.ts`,
-    Desktop: {
-        MultiExec: {
-            DesktopExec: `DEV=${process.env.DEV || "false"} ENVA='${
-                process.env.ENVA
-            }' ENVB='${process.env.ENVB}' NODE_ENV=${
-                process.env.NODE_ENV
-            } BRWS='${
-                process.env.BRWS
-            }' ./node_modules/.bin/cucumber-js --retry ${
-                process.env.RETRY || "3"
-            } --tags '${process.env.TAGS}' --parallel ${
-                process.env.PARALLEL
-            } -f json:report/report1.json`,
-
-            Desktopreport: `cat ./report/report1.json | npx cucumber-junit > ./report/e2etestsjunitreport1.xml`,
-            DesktopGeneratereport: `node src/utils/ReportOptions/Desktop/reportDesktop.js`,
-        },
-
-        Only: {
-            DesktopExecOnly: `DEV=${process.env.DEV || "false"} ENVA=${
-                process.env.ENVA
-            } ENVB=${process.env.ENVB} NODE_ENV=${process.env.NODE_ENV} BRWS=${
-                process.env.BRWS
-            } ./node_modules/.bin/cucumber-js --retry ${
-                process.env.RETRY || 3
-            } --tags ${process.env.TAGS} --parallel ${
-                process.env.PARALLEL
-            } -f json:report/report.json`,
-
-            DesktopreportOnly: `cat ./report/report.json | npx cucumber-junit > ./report/e2etestsjunitreport.xml`,
-
-            DesktopGeneratereportOnly: `node src/utils/ReportOptions/Desktop/reportDesktopOnly.js`,
-        },
-    },
-    Mobile: {
-        MultiExec: {
-            MobileExec: `DEV=${process.env.DEV || "false"} ENVA=${
-                process.env.ENVA
-            } ENVB=${process.env.ENVB} NODE_ENV=${
-                process.env.NODE_ENV
-            } DEVICE='${
-                process.env.DEVICE
-            }' ./node_modules/.bin/cucumber-js --retry ${
-                process.env.RETRY || "3"
-            } --tags ${process.env.TAGS} --parallel ${
-                process.env.PARALLEL
-            } -f json:report/report2.json`,
-
-            Mobilereport: `cat ./report/report2.json | npx cucumber-junit > ./report/junitreport2.xml`,
-            MobileGeneratereport: `node src/utils/ReportOptions/Responsive/reportResponsive.js`,
-        },
-        Only: {
-            MobileExecOnly: `DEV=${process.env.DEV || "false"} ENVA=${
-                process.env.ENVA
-            } ENVB=${process.env.ENVB} NODE_ENV=${
-                process.env.NODE_ENV
-            } DEVICE='${
-                process.env.DEVICE
-            }' ./node_modules/.bin/cucumber-js --retry ${
-                process.env.RETRY || "3"
-            } --tags ${process.env.TAGS} --parallel ${
-                process.env.PARALLEL
-            } -f json:report/report.json`,
-
-            MobilereportOnly: `cat ./report/report.json | npx cucumber-junit > ./report/e2etestsjunitreport.xml`,
-            MobileGeneratereportOnly: `node src/utils/ReportOptions/Responsive/reportResponsiveOnly.js`,
-        },
-    },
-    MergeReports: {
-        Mergereport:
-            "cat report/report.json | npx cucumber-junit > report/e2etestsjunitreport.xml",
-        MergeGeneratereport:
-            "node src/utils/ReportOptions/MergeReport/reportMerger.js",
-    },
-}
-const Enviroments = {
+const env = {
     ENVA: (String = process.env.ENVA || ""),
     ENVB: (String = process.env.ENVB || ""),
     NODE_ENV: (String = process.env.NODE_ENV || "local"),
@@ -178,219 +101,46 @@ const Enviroments = {
 const ExecDesktopOnly = async () => {
     process.env.DEVICE = undefined
     try {
-        await execAsync(Executions.Desktop.Only.DesktopExecOnly)
-
-        await execAsync(Executions.Desktop.Only.DesktopreportOnly)
-        console.log(
-            `Script gerar report.json e junit.xml executado com sucesso`
+        await execAsync(
+            `DEV=${process.env.DEV || "false"} ENVA=${process.env.ENVA} ENVB=${
+                process.env.ENVB
+            } NODE_ENV=${process.env.NODE_ENV} BRWS=${
+                process.env.BRWS
+            } ./node_modules/.bin/cucumber-js --retry ${
+                process.env.RETRY || 3
+            } --tags ${process.env.TAGS} --parallel ${
+                process.env.PARALLEL
+            } -f json:report/report.json`,
         )
-        await execAsync(Executions.Desktop.Only.DesktopGeneratereportOnly)
-        console.log(`Script reportDesktopOnly.js executado com sucesso`)
+        console.log(
+            `Gerando XML e junit`,
+        )
+        await execAsync(
+            `cat ./report/report.json | npx cucumber-junit > ./report/e2etestsjunitreport.xml`,
+        )
+        
     } catch (error) {
         console.error(`Erro ao executar o script do Cucumber: \n ${error} \n\n`)
-    } finally {
-        await execAsync(Executions.Desktop.Only.DesktopGeneratereportOnly)
+        await execAsync(
+            `cat ./report/report.json | npx cucumber-junit > ./report/e2etestsjunitreport.xml`,
+        )
+        
     }
 }
-const ResponsiveOnly = async () => {
-    const ChildB = exec(
-        Executions.Mobile.Only.MobileExecOnly,
-        (error, stdout, stderr) => {
-            if (error) {
-                console.error(
-                    `Erro ao executar o Script de MobileOnly: ${error}`
-                )
-                return
-            }
-            console.log(`Script MobileOnly executado com sucesso: ${stdout}`)
-        }
-    )
-    ChildB.on("exit", async () => {
-        const ChildB1 = exec(
-            Executions.Mobile.Only.MobilereportOnly,
-            (error, stdout, stderr) => {
-                if (error) {
-                    console.error(
-                        `Erro ao executar o Script de report.json: ${error}`
-                    )
-                    return
-                }
-                console.log(
-                    `Script gerar report.json e junit.xml executado com sucesso: ${stdout}`
-                )
-            }
-        )
-        ChildB1.on("exit", async () => {
-            exec(
-                Executions.Mobile.Only.MobileGeneratereportOnly,
-                (error, stdout, stderr) => {
-                    if (error) {
-                        console.error(
-                            `Erro ao executar o Script reportMobileOnly.js: ${error}`
-                        )
-                        return
-                    }
-                    console.log(
-                        `Script reportMobileOnly.js executado com sucesso: ${stdout}`
-                    )
-                }
-            )
-        })
-    })
-}
-async function MergeReport() {
-    process.env.DEVICE = undefined
-
-    const ChildC = exec(
-        Executions.Desktop.MultiExec.DesktopExec,
-        (error, stdout, stderr) => {
-            if (error) {
-                console.error(
-                    `Erro ao executar o Script de DesktopOnly: ${error}`
-                )
-                return
-            }
-            console.log(`Script DesktopOnly executado com sucesso: ${stdout}`)
-        }
-    )
-    ChildC.on("exit", async () => {
-        const ChildC1 = exec(
-            Executions.Desktop.MultiExec.Desktopreport,
-            (error, stdout, stderr) => {
-                if (error) {
-                    console.error(
-                        `Erro ao executar o Script de report.json: ${error}`
-                    )
-                    return
-                }
-                console.log(
-                    `Script gerar report.json e junit.xml executado com sucesso: ${stdout}`
-                )
-            }
-        )
-        ChildC1.on("exit", async () => {
-            const ChildC2 = exec(
-                Executions.Desktop.MultiExec.DesktopGeneratereport,
-                (error, stdout, stderr) => {
-                    if (error) {
-                        console.error(
-                            `Erro ao executar o Script reportDesktopOnly.js: ${error}`
-                        )
-                        return
-                    }
-                    console.log(
-                        `Script reportDesktopOnly.js executado com sucesso: ${stdout}`
-                    )
-                }
-            )
-
-            ChildC2.on("exit", async () => {
-                const ChildD = exec(
-                    Executions.Mobile.MultiExec.MobileExec,
-                    (error, stdout, stderr) => {
-                        if (error) {
-                            console.error(
-                                `Erro ao executar o Script de MobileMulti: ${error}`
-                            )
-                            return
-                        }
-                        console.log(
-                            `Script MobileMulti executado com sucesso: ${stdout}`
-                        )
-                    }
-                )
-
-                ChildD.on("exit", async () => {
-                    const ChildD1 = exec(
-                        Executions.Mobile.MultiExec.Mobilereport,
-                        (error, stdout, stderr) => {
-                            if (error) {
-                                console.error(
-                                    `Erro ao executar o Script de report.json: ${error}`
-                                )
-                                return
-                            }
-                            console.log(
-                                `Script gerar report.json e junit.xml executado com sucesso: ${stdout}`
-                            )
-                        }
-                    )
-                    ChildD1.on("exit", async () => {
-                        const ChildD2 = exec(
-                            Executions.Mobile.MultiExec.MobileGeneratereport,
-                            (error, stdout, stderr) => {
-                                if (error) {
-                                    console.error(
-                                        `Erro ao executar o Script reportMobileOnly.js: ${error}`
-                                    )
-                                    return
-                                }
-                                console.log(
-                                    `Script reportMobileOnly.js executado com sucesso: ${stdout}`
-                                )
-                            }
-                        )
-
-                        ChildD2.on("exit", async () => {
-                            const ChildD3 = exec(
-                                Executions.MergeReports.MergeGeneratereport,
-                                (error, stdout, stderr) => {
-                                    if (error) {
-                                        console.error(
-                                            `Erro ao executar o comando Merger: ${error}`
-                                        )
-                                        return
-                                    }
-                                    console.log(
-                                        `Comando Merger executado com sucesso: ${stdout}`
-                                    )
-                                }
-                            )
-                            ChildD3.on("exit", async () => {
-                                exec(
-                                    Executions.MergeReports.Mergereport,
-                                    (error, stdout, stderr) => {
-                                        if (error) {
-                                            console.error(
-                                                `Erro ao executar o comando Merger: ${error}`
-                                            )
-                                            return
-                                        }
-                                        console.log(
-                                            `Comando Merger executado com sucesso: ${stdout}`
-                                        )
-                                    }
-                                )
-                            })
-                        })
-                    })
-                })
-            })
-        })
-    })
-}
-
 const RunTests = async () => {
-    
     console.log("Iniciando Testes...\n")
 
-    if (
-        Enviroments.DESKTOP_ONLY.includes("true") &&
-        Enviroments.RESPONSIVE_ONLY.includes("false")
-    ) {
-        console.log(`Executando somente Desktop: ${Enviroments.BROWSER}\n`)
-        await ExecDesktopOnly()
-    } else if (
-        Enviroments.DESKTOP_ONLY.includes("false") &&
-        Enviroments.RESPONSIVE_ONLY.includes("true")
-    ) {
-        console.log(`Executando somente Mobile: ${Enviroments.DEVICE}\n`)
-        await ResponsiveOnly()
-    } else {
-        console.log(
-            `Executando Desktop: ${Enviroments.BROWSER} E Mobile: ${Enviroments.DEVICE}\n`
-        )
-        await MergeReport()
+    switch (true) {
+        case env.DESKTOP_ONLY.includes("true") &&
+            env.RESPONSIVE_ONLY.includes("false"):
+            console.log(`Executando somente Desktop: ${env.BROWSER}\n`)
+
+            await ExecDesktopOnly()
+
+            break
+
+        default:
+            break
     }
 }
 
