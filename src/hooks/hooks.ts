@@ -1,3 +1,4 @@
+import global from "../types/globalthis"
 import fs from "fs"
 import fsystem from "fs/promises"
 const path = require("path")
@@ -13,8 +14,8 @@ import {
     After,
 } from "@cucumber/cucumber"
 const dotenv = require("dotenv")
-import CreateDirectory from "../utils/create_directory/CreateDirectory"
-import GetBrowser, { browserTypes, browserType } from "./getBrowser"
+import CreateDirectory from "../helpers/create_directory/CreateDirectory"
+import GetBrowser, { browserTypes, browserType } from "../helpers/getbrowser/getBrowser"
 const { execSync } = require("child_process")
 dotenv.config()
 setDefaultTimeout(60 * 10000)

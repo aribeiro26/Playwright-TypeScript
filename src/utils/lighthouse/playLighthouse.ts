@@ -6,7 +6,7 @@ export const playLighthouse = async (url: string) => {
         args: ["--remote-debugging-port=9222"],
     })
     const page = await browser.newPage()
-    await page.goto(url,{timeout: 80000})
+    await page.goto(url, { timeout: 80000 })
 
     await playAudit({
         page: page,

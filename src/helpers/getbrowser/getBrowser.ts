@@ -1,3 +1,4 @@
+import global from "../../types/globalthis"
 import {
     chromium,
     firefox,
@@ -5,7 +6,7 @@ import {
     BrowserType,
     devices,
 } from "@playwright/test"
-import { config } from "../support/config"
+import { config } from "../../support/config"
 let user_dir = "./userDataDir"
 type browsertypes = {
     chrome: BrowserType

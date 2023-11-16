@@ -1,3 +1,4 @@
+import global from "../../types/globalthis"
 import { Given, Then, World } from "@cucumber/cucumber"
 import { join } from "path"
 import { Commons } from "../../support/commons"
@@ -5,8 +6,8 @@ import {playLighthouse} from "../../utils/lighthouse/playLighthouse"
 import {
     ICustomWorld,
     compareToBaseImage,
-    getImagePath,
-} from "../../utils/compare_images/compareImages"
+    
+} from "../../loaders/compare_images/compareImages"
 
 const commons = new Commons()
 

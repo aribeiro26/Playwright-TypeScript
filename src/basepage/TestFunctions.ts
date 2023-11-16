@@ -1,3 +1,4 @@
+import global from "../types/globalthis"
 import { ElementHandle, expect } from "@playwright/test"
 import {
     elementRole,

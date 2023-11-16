@@ -1,4 +1,4 @@
-import enviroments from "../enviroments/enviroments.json"
+import enviroments from "../config/enviroments/enviroments.json"
 interface EnvConfig {
     [key: string]: {
         server: string

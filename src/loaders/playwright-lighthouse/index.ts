@@ -45,4 +45,7 @@ export interface playwrightLighthouseConfig {
  */
 export function playAudit(
   playwrightLHConfiguration: playwrightLighthouseConfig
-): Promise<any>;
+) {
+
+return playwrightLHConfiguration
+}

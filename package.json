@@ -3,8 +3,8 @@
     "version": "2.0.0",
     "description": "Playwright TypeScript",
     "scripts": {
-        "report": "node src/utils/ExecReport.js",
-        "test": "./node_modules/.bin/cross-env RETRY=0 DEV=true DESKTOP_ONLY=true RESPONSIVE_ONLY=false NODE_ENV=local ENVA='' ENVB='' PARALLEL=1 TAGS=@Search BRWS='chrome' DEVICE='iPhone 11' node ./app.js"
+        "report": "node src/helpers/reporters/ExecReport.ts",
+        "test": "./node_modules/.bin/cross-env RETRY=0 DEV=true DESKTOP_ONLY=true RESPONSIVE_ONLY=false NODE_ENV=local ENVA='' ENVB='' PARALLEL=1 TAGS=@Search BRWS='chrome' DEVICE='iPhone 11' ts-node ./app.ts"
     },
     "keywords": [
         "E2E",

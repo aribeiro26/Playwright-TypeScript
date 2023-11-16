@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "target": "esnext",
+        "target": "ES5",
         "module": "commonjs", 
         "moduleResolution": "node", 
         "strict": true,
@@ -10,7 +10,6 @@
         "esModuleInterop": true,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
-        "types": ["./src/types/global.d.ts"]
-    },
-    "include": ["./src/**/*", "./src/types/global.d.ts", "app.cjs", "app.js"]
+        
+    }
 }
