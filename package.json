@@ -17,7 +17,7 @@
     "license": "ISC",
     "devDependencies": {
         "@faker-js/faker": "^8.0.2",
-        "@playwright/test": "^1.35.1",
+        "@playwright/test": "^1.39.0",
         "@types/chai": "^4.3.5",
         "@types/fs-extra": "^11.0.1",
         "@types/pixelmatch": "^5.2.6",
