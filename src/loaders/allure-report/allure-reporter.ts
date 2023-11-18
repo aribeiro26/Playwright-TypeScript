@@ -1,6 +1,6 @@
 import { AllureRuntime, CucumberJSAllureFormatter } from "allure-cucumberjs"
 
-function Reporter(options: any) {
+export function Reporter(options: any) {
     return new CucumberJSAllureFormatter(
         options,
         new AllureRuntime({ resultsDir: "./reports/allure-results" }),
@@ -32,5 +32,3 @@ function Reporter(options: any) {
 }
 Reporter.prototype = Object.create(CucumberJSAllureFormatter.prototype)
 Reporter.prototype.constructor = Reporter
-
-exports.default = Reporter

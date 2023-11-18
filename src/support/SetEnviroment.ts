@@ -1,59 +1,32 @@
-import enviroments from "../config/enviroments/enviroments.json"
 interface EnvConfig {
     [key: string]: {
-        server: string
-        headless: boolean
-        envA?: string
-        envB?: string
-    }
+        server?: string;
+        headless?: boolean;
+        [additionalProp: string]: any;
+    };
 }
-const environments: EnvConfig = {
-    hml: enviroments.hml,
-    local: enviroments.local,
-}
-const dev = {
-    Node_Env: process.env.NODE_ENV || "hml",
-    dev: process.env.DEV?.includes("true"),
-}
-const SelectEnv =
-    dev.dev || ["hml"].includes(dev.Node_Env)
-        ? dev.Node_Env
-        : (dev.Node_Env = "local")
-const Environments = {
-    setEnv: function () {
-        if (environments.hasOwnProperty(SelectEnv)) {
-            return environments[SelectEnv]
-        } else {
-            throw new Error(`Environment '${SelectEnv}' not defined`)
-        }
-    },
-}
-export interface IEnv {
-    server: string
-    headless: boolean
-    envA: string
-    envB: string
-}
-const SetEnviroments = (): IEnv => {
-    const Envs = {
-        server:
-            Environments.setEnv().server || process.env.url || typeof undefined,
-        headless:
-            dev.dev === true
-                ? (Environments.setEnv().headless = false)
-                : Environments.setEnv().headless || true,
 
-        envA:
-            Environments.setEnv().envA ||
-            process.env.ENVA ||
-            process.env.envA ||
-            typeof undefined,
-        envB:
-            Environments.setEnv().envB ||
-            process.env.ENVB ||
-            process.env.envB ||
-            typeof undefined,
+const SetEnvironments = (envConfig: EnvConfig): any => {
+    const nodeEnv = process.env.NODE_ENV || "local";
+    const isDev = process.env.DEV?.includes("true");
+
+    const selectedEnvConfig = envConfig[nodeEnv];
+    if (!selectedEnvConfig) {
+        throw new Error(`Environment '${nodeEnv}' not defined`);
     }
-    return Envs
-}
-export default SetEnviroments
+
+    const envs = {
+        server: selectedEnvConfig.server || process.env.SERVER || "defaultServer",
+        headless: isDev ? false : selectedEnvConfig.headless || true,
+    };
+
+    for (const key in selectedEnvConfig) {
+        if (selectedEnvConfig.hasOwnProperty(key)) {
+            envs[key] = selectedEnvConfig[key] || process.env[key.toUpperCase()];
+        }
+    }
+
+    return envs;
+};
+
+export default SetEnvironments;
