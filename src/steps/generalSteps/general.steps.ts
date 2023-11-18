@@ -2,12 +2,12 @@ import global from "../../types/globalthis"
 import { Given, Then, World } from "@cucumber/cucumber"
 import { join } from "path"
 import { Commons } from "../../support/commons"
-import {playLighthouse} from "../../utils/lighthouse/playLighthouse"
+import { playLighthouse } from "../../utils/lighthouse/playLighthouse"
 import {
     ICustomWorld,
     compareToBaseImage,
-    
 } from "../../loaders/compare_images/compareImages"
+import axeCore from "../../loaders/axe_core/acessibility"
 
 const commons = new Commons()
 
@@ -32,9 +32,16 @@ Then(
         await global.page.waitForTimeout(1000)
         const screenshot = await global.page.screenshot()
         await compareToBaseImage(this, name, screenshot as Buffer)
-    },
+    }
 )
 
 Then("Execute analise lighthouse {string}", async function (name: string) {
     await playLighthouse(name)
 })
+
+Then(
+    "Execute analise de acessibilidade {string}",
+    async function (url: string) {
+        await axeCore(global.page, url)
+    }
+)

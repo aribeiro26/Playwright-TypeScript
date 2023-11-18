@@ -25,7 +25,7 @@ export const playLighthouse = async (url: string) => {
                 html: true, //defaults to false
                 csv: true, //defaults to false
             },
-            name: `lighthouse-${new Date().getTime()}`, //defaults to `lighthouse-${new Date().getTime()}`
+            name: `lighthouse`, //defaults to `lighthouse-${new Date().getTime()}`
             directory: `report/lighthouse`, //defaults to `${process.cwd()}/lighthouse`
         },
     })

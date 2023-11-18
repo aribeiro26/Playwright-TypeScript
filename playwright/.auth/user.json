@@ -2,20 +2,20 @@
   "cookies": [
     {
       "name": "AEC",
-      "value": "Ackid1R-8WOD_tNTrEhnLeB8LGKeWt-loHkInXVual3Y9ZkmA4Z5yWgs4-k",
+      "value": "Ackid1T5JDDisLl9XNNOGyWXKz8soOs2-rxSg8foCwNA5EOaiUR73N-15Dw",
       "domain": ".google.com.br",
       "path": "/",
-      "expires": 1715794083.78457,
+      "expires": 1715899973.293204,
       "httpOnly": true,
       "secure": true,
       "sameSite": "Lax"
     },
     {
       "name": "NID",
-      "value": "511=phvNPgfaFnG03c2B8APZcWdJ7FNxRb7vGqLts0m5NK4UNS_rKOjCjLpwt92mOt_dMJSnKHSti8uFj_EBvbAiBVplRSMiLbU7YvG7kr2RTthlQ_60sKI9BVaKeDhAUKBVgS2iVQfD8rdw24Gk_J4ZNrfcHrUAX3Mgm0cF6iGzyBAYxVzMNGaX1cJa",
+      "value": "511=WMArOaa82LoXMxxPQkUXBLnjIA8m1pN6Ap26g_sCo27DNPSI734UQMNuucZlUw-4cQq1Csx6t5TZjPLM3gXeoJOrQa5kLImCE7CJuqKj7jCaWG1Jh-IFuy8j9TnGSIgLez-AgpZkNL8TUoAPUeb02tMkfyMXh1f2Du09VpMJzVwPR0aQuRJuVT1u",
       "domain": ".google.com.br",
       "path": "/",
-      "expires": 1716053281.801566,
+      "expires": 1716159173.263656,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
@@ -25,37 +25,37 @@
       "value": "19037049-1:",
       "domain": ".google.com.br",
       "path": "/",
-      "expires": 1702834084,
+      "expires": 1702939974,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "OTZ",
-      "value": "7298968_68_64_73560_68_416340",
+      "value": "7300733_68_64_73560_68_416340",
       "domain": "ogs.google.com.br",
       "path": "/",
-      "expires": 1702834084,
+      "expires": 1702939974,
       "httpOnly": false,
       "secure": true,
       "sameSite": "Lax"
     },
     {
       "name": "NID",
-      "value": "511=VUazJML_8OI5vN8hGSj_mjsCL7LJtQhrwpqmQEjJ5RNcV_l8f5zkBjT7_qzbwW6RkgV2lcomc2O7G418UCO2fvG3EmZRYTlUVQRNRrhrWqR5-r_Js5w8yJ_sRC3XAWRC7ymunnAKEXRVDODuQrYT1qwFOcB8XzCOX_fJg6-kLkM",
+      "value": "511=k5ybLhRYeaH85lc88ifWwpCpBjxsG36RR9kbR-kNNS3sOzBzBSh98kZ70-4qxPOdzy795ilFSU0zlrtX_ZwglPAsH2f4fCE5jgE_tSAA1TmpAwO5fEQi2t1HhrIIwrRa1T_JtYI18t17Neu8P-WaP8gfYxSwpiMG7exwAleITiQ",
       "domain": ".google.com",
       "path": "/",
-      "expires": 1716053284.710434,
+      "expires": 1716159175.1254,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "1P_JAR",
-      "value": "2023-11-17-20",
+      "value": "2023-11-18-20",
       "domain": ".google.com.br",
       "path": "/",
-      "expires": 1702854900.96129,
+      "expires": 1702941724.963896,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
@@ -67,7 +67,7 @@
       "localStorage": [
         {
           "name": "sb_wiz.zpc.gws-wiz.",
-          "value": "{\"0\":[[\"mae quebra janela de ônibus\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"pedro sánchez espanha\",46,[3,143,357,362,396],{\"lm\":[],\"zf\":33,\"zh\":\"Pedro Sánchez\",\"zi\":\"Presidente do governo da Espanha\",\"zl\":8,\"zp\":{\"gs_ssp\":\"eJzj4tbP1TcwNDTNLspONmD0EitITSnKVyg-vDAvOSO1SiG1uCAxLyMRAOGtDQ0\"},\"zs\":\"data:image/jpeg;base64,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\"}],[\"feriados novembro consciencia negra\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"lei profissão sanitarista\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"black friday playstation plus\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"comprar ingressos brasil x argentina\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"de la cruz flamengo\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"denise da mata\",46,[3,143,357,362,396],{\"lm\":[],\"zf\":33,\"zh\":\"Denise da Mata\",\"zi\":\"Artista musical\",\"zl\":8,\"zp\":{\"gs_ssp\":\"eJzj4tVP1zc0TMs2zK7KSsoxYPTiS0nNyyxOVUhJVMhNLEkEAJp6Cgc\"}}],[\"décimo terceiro salário\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"amanda camargo botafogo\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}]],\"1\":{\"ag\":{\"a\":{\"8\":[\"Pesquisas em alta\"]}},\"q\":\"p8ALcWwbkbezX0mp5MT8GWDQbSw\"}}"
+          "value": "{\"0\":[[\"jogos nba hoje onde assistir\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"nova camisa flamengo consciência negra\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"eleições confea crea\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"haaland lesão\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"kit churrasco friboi governo federal\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"motogp catar\",46,[3,143,357,362,396],{\"lm\":[],\"zf\":33,\"zh\":\"motogp catar\",\"zi\":\"Grande Prêmio do Catar de Motovelocidade\",\"zl\":8,\"zp\":{\"gs_ssp\":\"eJzj4tTP1TdIrzCySDFg9OLJzS_JTy9QSE4sSSwCAGBqCAQ\"},\"zs\":\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAA8CAMAAADG+c2+AAAAeFBMVEX////7+/vh4eHw8PDk5OTa2tr09PSysrK+vr5cXFz4+PjQ0NDt7e21tbXHx8fp6emsrKyenp6GhoaYmJhCQkJ+fn52dnZXV1dpaWk8PDxMTExjY2OMjIxRUVGkpKQ2NjYuLi7/2tr/x8f/n5//PT3/8PD/rKz/pqY3OBkkAAADlUlEQVRYha1X6cKbKBRlF0WQaOKa2LQz7bz/Gw6uQbz6pWnPnyAcLnflEoRgpHUX3w/WPgG/Jhjx598T+A1RIxG//S15okSU4wRdz2m6reIBVdwW50x+QUlKEcqzM9a1IMk0Ulkenx8tp99InpAeRCM9joRE+mI2i6aOc/H6LPj0m5040RTIKjWNJTfO7Z60h02YvPJ1pp5NGZyIvYN8DEt0+XB8q+exano3LzhJGrxaswykdVqmkDy2U35WkcejNpQZodZQtR6L9RwByEk4Y6btneBq0GwIarOsvUKmbogl4dYBQEa1I7HGWi1eus+6MK/o7hYSN/hiB1ZPytDVR4tfjM/OwZJ+QJPl4Ia7n7uzHb3yabbbb6X1fg6neHAV94tmtjmIq9lLvAOB6pGuPK1GkMm8ansy6ncOa8IJR4uIHR1x29osOPeyxiGRchdS0+8FIib0aK3ybb5lwvJkU+iUWRxWfosgZO2i1QvqIpRi27gyFmq4r5IB+DkPSj8EV2SICl3Gg8ypwWJslll18bkJM1YF1CCmFLz7utcu3yDuUqSmAfdFwNbF7AEpWHhmbWyWbXwJuLR8DSVVUbg+biu9j43NCOOAu7m3VSYhg8k27l/0os4/gkDk5Ln9LsGogecpoEYQega3uoK8siLLEV10tBXEuO4u21Obpex5NI5EBZ5cm93U7az/qt6OqZ6WFegaCxQ2P238V9cjqG1LBi83COiLoKtX5I+qPGz5qo/M3uacCLmffQs6itJoN0tuODVhxb2HrEzSXS245DX8wEVfogT7NnrA7fIdPOFp/e1DJyJ5lCNFu8v49wDnJxoert3pC/MIyXGlpXV98Ho7Rb/PmxWsgYN2jgZInBnYf4q+DQY8TSZQLvtPop2HjW0VSJj+KCOP7EpIVhwddgqTH60I+OYRd0K//ziR2B2Urm4O8sYUGP3z789DgRg0Wl2PHChI5J7Q309UBCqQVflxPn2NKjCa1uVnN+KCrdHJLf70QlwhvVeabT+puBD1KkQeZtHv4bkMWsTB/0u/i/VpWmH9ZwEZQZhYnmYtlucPpncgtFTLrXPj4s9NTjQxi0D8PFSQMsJKRlYwxrIVbARh8+6kWrtS0lWFw8Wh74ef4j589b2VRvGSKwfjIKXWUe/gGBN/+CnyuIrjrm42FxXhE8atctwZ2QG9ra0dhlEUaa2lHCQ71szno9pZlqbvt6MC/frvTer/VbAo7cV6xOoAAAAASUVORK5CYII=\"}],[\"trem linha 9 esmeralda\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"lakers x trail blazers onde assistir\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"padre egídio hospital padre zé\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}],[\"ps5 jogos black friday\",0,[3,143,357,362,396],{\"zf\":33,\"zl\":8,\"zp\":{\"gs_ss\":\"1\"}}]],\"1\":{\"ag\":{\"a\":{\"8\":[\"Pesquisas em alta\"]}},\"q\":\"bqnZ5ZY8kSx1jybU1-RPzOvVGb8\"}}"
         }
       ]
     }

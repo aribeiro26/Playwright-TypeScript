@@ -1,6 +1,7 @@
 import global from "../types/globalthis"
 import fs from "fs"
-import fsystem from "fs/promises"
+import { promisify } from "util"
+import { readFile } from "fs"
 const path = require("path")
 import {
     setDefaultTimeout,
@@ -15,7 +16,10 @@ import {
 } from "@cucumber/cucumber"
 const dotenv = require("dotenv")
 import CreateDirectory from "../helpers/create_directory/CreateDirectory"
-import GetBrowser, { browserTypes, browserType } from "../helpers/getbrowser/getBrowser"
+import GetBrowser, {
+    browserTypes,
+    browserType,
+} from "../helpers/getbrowser/getBrowser"
 const { execSync } = require("child_process")
 dotenv.config()
 setDefaultTimeout(60 * 10000)
@@ -84,8 +88,7 @@ AfterStep(async function (this: World, scenario: ITestCaseHookParameter) {
  * @param {ITestCaseHookParameter} scenario - O objeto ITestCaseHookParameter.
  * @returns {Promise<void>}
  */
-import { promisify } from 'util';  
-import { readFile } from 'fs';
+
 After(async function (this: World, scenario: ITestCaseHookParameter) {
     if (
         scenario.result?.status === Status.FAILED ||
