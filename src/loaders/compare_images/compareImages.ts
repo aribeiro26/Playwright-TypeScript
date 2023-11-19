@@ -1,4 +1,3 @@
-import { visualcompConfig } from "../../support/config"
 import { ensureFile, pathExists } from "fs-extra"
 import pixelmatch from "pixelmatch"
 import { PNG } from "pngjs"
@@ -8,6 +7,9 @@ import { join } from "path"
 import { World } from "@cucumber/cucumber"
 import * as messages from "@cucumber/messages"
 
+const visualcompConfig = {
+    IMG_THRESHOLD: { threshold: 0.4 },
+}
 /**
  * Compares a screenshot to a base image,
  * if the base image doesn't exist it fails the test but creates a new base image based on

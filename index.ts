@@ -1,5 +1,4 @@
-import TestFunctions from "./src/basepage/TestFunctions"
-import SetEnv from "./src/support/SetEnviroment"
+export { testFunctions } from "./src/basepage/testFunctions"
 import {
     Locale,
     Cookie,
@@ -34,20 +33,12 @@ import {
 } from "./src/loaders/compare_images/compareImages"
 import axeCore from "./src/loaders/axe_core/acessibility"
 import CreateDirectory from "./src/helpers/create_directory/CreateDirectory"
-import GetBrowser, {
-    browserTypes,
-    browserType,
-} from "./src/helpers/getbrowser/getBrowser"
 
-export {
-    GetBrowser,
-    browserTypes,
-    browserType,
+export {      
     CreateDirectory,
     axeCore,
     ICustomWorld,
     compareToBaseImage,
-    TestFunctions,
     Reporter,
     global,
     playLighthouse,
@@ -56,7 +47,6 @@ export {
     getScriptMultExec,
     params,
     executions,
-    SetEnv,
     Locale,
     Cookie,
     IApiOptions,

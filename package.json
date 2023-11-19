@@ -1,9 +1,9 @@
 {
     "name": "playwright.typescript.cucumber",
-    "version": "2.0.3",
+    "version": "2.0.6",
     "description": "Projeto do playwright com cucumber, teste de regressao visual, teste de acessibilidade e lighthouse integrado",
     "scripts": {
-        "build": "tsc",
+        "build": "tsc && cp package.json dist/ && cp .eslintrc.js dist/ && cp package-lock.json dist/",        
         "report": "node src/helpers/reporters/ExecReport.ts",
         "test": "./node_modules/.bin/cross-env RETRY=0 DEV=true DESKTOP_ONLY=true RESPONSIVE_ONLY=false NODE_ENV=local ENVA='' ENVB='' PARALLEL=1 TAGS=@Search BRWS='chrome' DEVICE='iPhone 11' ts-node ./app.ts"
     },

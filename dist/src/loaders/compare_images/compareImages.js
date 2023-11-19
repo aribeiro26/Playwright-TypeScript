@@ -63,13 +63,15 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getDifference = exports.compareToBaseImage = exports.getImagePath = void 0;
-var config_1 = require("../../support/config");
 var fs_extra_1 = require("fs-extra");
 var pixelmatch_1 = __importDefault(require("pixelmatch"));
 var pngjs_1 = require("pngjs");
 var fs = __importStar(require("fs"));
 var fs_1 = require("fs");
 var path_1 = require("path");
+var visualcompConfig = {
+    IMG_THRESHOLD: { threshold: 0.4 },
+};
 function getImagePath(customWorld, name, options) {
     var _a;
     return (0, path_1.join)("report/screenshots", ((_a = customWorld.feature) === null || _a === void 0 ? void 0 : _a.uri) || "", (options === null || options === void 0 ? void 0 : options.skipOs) ? "" : process.platform, process.env.BRWS || "chrome", "".concat(name, ".png"));
@@ -115,7 +117,7 @@ exports.compareToBaseImage = compareToBaseImage;
  * @param threshold the difference threshold
  */
 function getDifference(name, img1, img2, threshold) {
-    if (threshold === void 0) { threshold = config_1.visualcompConfig.IMG_THRESHOLD; }
+    if (threshold === void 0) { threshold = visualcompConfig.IMG_THRESHOLD; }
     var width = img2.width, height = img2.height;
     var diff = new pngjs_1.PNG({ width: width, height: height });
     var difference = (0, pixelmatch_1.default)(img1.data, img2.data, diff.data, width, height, threshold);
