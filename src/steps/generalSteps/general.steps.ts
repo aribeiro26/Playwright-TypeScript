@@ -1,19 +1,12 @@
 import global from "../../types/globalthis"
 import { Given, Then, World } from "@cucumber/cucumber"
 import { join } from "path"
-import { Commons } from "../../support/commons"
 import { playLighthouse } from "../../utils/lighthouse/playLighthouse"
 import {
     ICustomWorld,
     compareToBaseImage,
 } from "../../loaders/compare_images/compareImages"
 import axeCore from "../../loaders/axe_core/acessibility"
-
-const commons = new Commons()
-
-Given(/Estar na pagina Google/, async () => {
-    await commons.GoHome()
-})
 
 Then("Snapshot {string}", async function (this: World, name: string) {
     await global.page.screenshot({ path: join("test-results", `${name}.png`) })

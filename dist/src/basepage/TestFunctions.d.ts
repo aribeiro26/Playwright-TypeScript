@@ -1,21 +1,6 @@
-import global from "../types/globalthis"
-import { ElementHandle, expect } from "@playwright/test"
-import {
-    elementRole,
-    IRoleoptions,
-    Cookie,
-    IClickoptions,
-    authFile,
-    Pagestate,
-    IoptionsPage,
-    IgotoOptions,
-    ILocator,
-    IFill,
-    commomOptions,
-    IApiOptions,
-    TypeElementOptions,
-} from "../types/ElementsTypes"
-export class testFunctions {
+import { ElementHandle } from "@playwright/test";
+import { elementRole, IRoleoptions, Cookie, IClickoptions, authFile, Pagestate, IoptionsPage, IgotoOptions, ILocator, IFill, commomOptions, IApiOptions, TypeElementOptions } from "../types/ElementsTypes";
+export default class testFunctions {
     /**
      * Executa Debug do E2E - Abrindo Ispect do Playwright
      * Exemplo de Uso
@@ -23,7 +8,7 @@ export class testFunctions {
      * await this.Debug()
      *
      */
-    Debug = async () => await global.page.pause()
+    Debug: () => Promise<void>;
     /**
      * Executa um clique em um elemento ou em um elemento com um papel (role).
      *
@@ -43,34 +28,7 @@ export class testFunctions {
      * await this.Executeclick('directions',{hastext:"ola"},undefined,{},{timeout: 50})
      *
      */
-    async Executeclick(
-        element: string | "",
-        locatorOptions: ILocator = {},
-        role: elementRole = undefined,
-        options: IRoleoptions = {},
-        clickOptions: IClickoptions = { timeout: 60 }
-    ) {
-        const timeoutSeconds = clickOptions.timeout
-            ? clickOptions.timeout * 1000
-            : 60000
-        if (role !== undefined && element === "") {
-            return await global.page
-                .getByRole(role, options)
-                .click({ ...clickOptions, timeout: timeoutSeconds })
-        }
-        if (element !== "" && role === undefined) {
-            return await global.page
-                .locator(element, locatorOptions)
-                .click({ ...clickOptions, timeout: timeoutSeconds })
-        }
-        if (element !== "" && role !== undefined) {
-            return await global.page
-                .locator(element, locatorOptions)
-                .getByRole(role, options)
-                .click({ ...clickOptions, timeout: timeoutSeconds })
-        }
-        throw new Error("Parâmetros inválidos.")
-    }
+    Executeclick(element: string | "", locatorOptions?: ILocator, role?: elementRole, options?: IRoleoptions, clickOptions?: IClickoptions): Promise<void>;
     /**
      * Insere um texto em um elemento de entrada.
      *
@@ -90,38 +48,7 @@ export class testFunctions {
      * await this.TypeText('input',{hastext:"ola"},undefined,{},{timeout: 50})
      *
      */
-    TypeText = async (
-        element: string,
-        locatorOptions: ILocator = {},
-        text: string,
-        role?: elementRole,
-        options: IRoleoptions = {},
-        fillOp: IFill = {
-            noWaitAfter: true,
-            timeout: 60,
-        }
-    ) => {
-        const timeoutSeconds = fillOp.timeout ? fillOp.timeout * 1000 : 60000
-        if (role === undefined && element !== "") {
-            return await global.page
-                .locator(element, locatorOptions)
-                .fill(text, { ...fillOp, timeout: timeoutSeconds })
-        } else if (element !== "" && role !== undefined) {
-            return await global.page
-                .locator(element, locatorOptions)
-                .getByRole(role, options)
-                .fill(text, {
-                    ...{ ...fillOp, timeout: timeoutSeconds },
-                    timeout: timeoutSeconds,
-                })
-        } else if (element === "" && role !== undefined) {
-            return await global.page
-                .getByRole(role, options)
-                .fill(text, { ...fillOp, timeout: timeoutSeconds })
-        } else {
-            throw new Error("Parâmetros inválidos.")
-        }
-    }
+    TypeText: (element: string, locatorOptions: ILocator | undefined, text: string, role?: elementRole, options?: IRoleoptions, fillOp?: IFill) => Promise<void>;
     /**
      * Retorna um objeto do tipo Locator que representa o elemento encontrado na página.
      *
@@ -136,9 +63,7 @@ export class testFunctions {
      * await this.GetElement('input',{hastext:"ola"})
      *
      */
-    GetElement = async (element: string, locatorOptions?: ILocator) => {
-        return await global.page.locator(element, locatorOptions)
-    }
+    GetElement: (element: string, locatorOptions?: ILocator) => Promise<import("playwright-core").Locator>;
     /**
      * Salva o estado de armazenamento da página.
      *
@@ -150,9 +75,25 @@ export class testFunctions {
      * // Salva o estado de armazenamento da página.
      * await SetStorage();
      */
-    SetStorage = async (
-        authfile: authFile = { path: "playwright/.auth/user.json" }
-    ) => global.page.context().storageState(authfile)
+    SetStorage: (authfile?: authFile) => Promise<{
+        cookies: {
+            name: string;
+            value: string;
+            domain: string;
+            path: string;
+            expires: number;
+            httpOnly: boolean;
+            secure: boolean;
+            sameSite: "Strict" | "Lax" | "None";
+        }[];
+        origins: {
+            origin: string;
+            localStorage: {
+                name: string;
+                value: string;
+            }[];
+        }[];
+    }>;
     /**
      * Obtém uma nova página com os parâmetros especificados.
      *
@@ -167,16 +108,7 @@ export class testFunctions {
      * global.page = await newPage
      *
      */
-    GetNewPage = async (
-        params?: any,
-        options: IoptionsPage = { timeout: 15000 }
-    ) => {
-        const [newPage] = await Promise.all([
-            global.context.waitForEvent("page", options),
-            params,
-        ])
-        return newPage
-    }
+    GetNewPage: (params?: any, options?: IoptionsPage) => Promise<import("playwright-core").Page>;
     /**
      * Este metodo aguarda tempo definido em segundos
      * @param options.timeout - O tempo máximo em segundos para esperar antes de ir para próximo de método (padrão: 60 segundos)
@@ -185,10 +117,7 @@ export class testFunctions {
      * await this.WaitForTimeout({timeout: 60});
      *
      */
-    WaitForTimeout = async (options: IoptionsPage) => {
-        const timeoutSeconds = options.timeout ? options.timeout * 1000 : 60000
-        await global.page.waitForTimeout(timeoutSeconds)
-    }
+    WaitForTimeout: (options: IoptionsPage) => Promise<void>;
     /**
      * Executa uma função no contexto da página.
      *
@@ -202,19 +131,17 @@ export class testFunctions {
      *     console.log('Olá, mundo!');
      * });
      */
-    ExecuteJS = async (fn: () => any) => {
-        return await global.page.evaluate(fn)
-    }
+    ExecuteJS: (fn: () => any) => Promise<any>;
     /**
      * Limpa os cookies do contexto atual.
      */
-    ClearCookies = () => global.context.clearCookies()
+    ClearCookies: () => Promise<void>;
     /**
      * Adiciona cookies ao contexto atual.
      *
      * @param {Cookie[]} cookies - Os cookies a serem adicionados.
      */
-    AddCookies = (cookies: Cookie[]) => global.context.addCookies(cookies)
+    AddCookies: (cookies: Cookie[]) => Promise<void>;
     /**
      * Faz uma requisição GET no endpoint especificado.
      *
@@ -227,8 +154,7 @@ export class testFunctions {
      * // Faz uma requisição GET para a URL especificada.
      * const result = await GetRequest('https://exemplo.com/api', { headers: { 'Authorization': 'Bearer token' } });
      */
-    GetRequest = async (endpoint: string, headers: IApiOptions) =>
-        await global.page.request.get(endpoint, headers)
+    GetRequest: (endpoint: string, headers: IApiOptions) => Promise<import("playwright-core").APIResponse>;
     /**
      * Faz uma requisição POST no endpoint especificado.
      *
@@ -241,8 +167,7 @@ export class testFunctions {
      * // Faz uma requisição POST para a URL especificada.
      * const result = await PostRequest('https://exemplo.com/api', { headers: { 'Authorization': 'Bearer token' }, data: { 'campo1': 'valor1', 'campo2': 'valor2' } });
      */
-    PostRequest = async (endpoint: string, headers: IApiOptions) =>
-        await global.page.request.post(endpoint, headers)
+    PostRequest: (endpoint: string, headers: IApiOptions) => Promise<import("playwright-core").APIResponse>;
     /**
      * Redireciona a página atual para uma nova URL.
      *
@@ -259,18 +184,7 @@ export class testFunctions {
      * await this.Redirect("url",{ timeout:" 60,waitUntil: 'load' })
      *
      */
-    Redirect = async (
-        url: string,
-        gotoOptions: IgotoOptions = { timeout: 200, waitUntil: "load" }
-    ) => {
-        const timeoutSeconds = gotoOptions.timeout
-            ? gotoOptions.timeout * 1000
-            : 60000
-        await global.page.goto(url, {
-            ...gotoOptions,
-            timeout: timeoutSeconds,
-        })
-    }
+    Redirect: (url: string, gotoOptions?: IgotoOptions) => Promise<void>;
     /**
      * Valida se o texto de um elemento é igual ao texto especificado.
      *
@@ -282,8 +196,7 @@ export class testFunctions {
      * // Valida se o texto do elemento <h1> é igual a 'Título'.
      * await ValidateText('h1', 'Título');
      */
-    ValidateText = async (element: string, text: string) =>
-        await expect(global.page.locator(element)).toHaveText(text)
+    ValidateText: (element: string, text: string) => Promise<void>;
     /**
      * Valida se a URL atual começa com a URL especificada.
      *
@@ -295,18 +208,7 @@ export class testFunctions {
      * // Valida se a URL atual começa com 'https://exemplo.com'.
      * await ValidateUrl('https://exemplo.com', { timeout: 30 });
      */
-    ValidateUrl = async (
-        url: string,
-        commomOptions: commomOptions = { timeout: 60 }
-    ) => {
-        const timeoutSeconds = commomOptions.timeout
-            ? commomOptions.timeout * 1000
-            : 60000
-        await global.page.waitForURL(
-            (currentUrl: URL) => currentUrl.href.startsWith(url),
-            { ...commomOptions, timeout: timeoutSeconds }
-        )
-    }
+    ValidateUrl: (url: string, commomOptions?: commomOptions) => Promise<void>;
     /**
      * Pressiona uma tecla ou combinação de teclas no teclado.
      *
@@ -321,13 +223,7 @@ export class testFunctions {
      * // Pressiona a tecla Tab no elemento <input>.
      * await KeyBoard('input', 'Tab');
      */
-    KeyBoard = async (element: string = "", keys: string) => {
-        if (element === "") {
-            return await global.page.keyboard.press(keys)
-        } else {
-            return await global.page.locator(element).press(keys)
-        }
-    }
+    KeyBoard: (element: string | undefined, keys: string) => Promise<void>;
     /**
      * Espera até que a página carregue completamente, de acordo com o estado definido em 'stat'.
      * @async
@@ -340,16 +236,7 @@ export class testFunctions {
      * await this.WaitLoadPage("load",{ timeout: 60 })
      *
      */
-    WaitLoadPage = async (
-        stat: Pagestate = "load",
-        options: IoptionsPage = { timeout: 60 }
-    ) => {
-        const timeoutSeconds = options.timeout ? options.timeout * 1000 : 60000
-        await global.page.waitForLoadState(stat, {
-            ...options,
-            timeout: timeoutSeconds,
-        })
-    }
+    WaitLoadPage: (stat?: Pagestate, options?: IoptionsPage) => Promise<void>;
     /**
      * Insere uma senha em um formulário de 6 dígitos.
      *
@@ -359,12 +246,7 @@ export class testFunctions {
      * // Insere a senha "123456" em um formulário.
      * await Passwd();
      */
-    Passwd = async () => {
-        await this.WaitLoadPage("domcontentloaded")
-        for (let i = 1; i < 7; i++) {
-            await global.page.click("*text= " + i.toString())
-        }
-    }
+    Passwd: () => Promise<void>;
     /**
      * Valida se um elemento existe na página.
      *
@@ -376,10 +258,7 @@ export class testFunctions {
      * // Valida se o elemento <h1> existe na página.
      * await ValidateElementExist('h1');
      */
-    ValidateElementExist = async (element: string) =>
-        await global.page
-            .locator(element)
-            .waitFor({ state: "attached", timeout: 50000 })
+    ValidateElementExist: (element: string) => Promise<void>;
     /**
      * Valida se um elemento é visível na página.
      *
@@ -393,11 +272,7 @@ export class testFunctions {
      * // Valida se o elemento <h1> é visível na página.
      * await isVisible('h1');
      */
-    isVisible = async (
-        element: string,
-        locatorOptions: ILocator = {},
-        options?: IoptionsPage
-    ) => await global.page.locator(element, locatorOptions).isVisible(options)
+    isVisible: (element: string, locatorOptions?: ILocator, options?: IoptionsPage) => Promise<boolean>;
     /**
      * Aguarda até que um elemento seja carregado na página de acordo com as opções fornecidas.
      *
@@ -417,39 +292,7 @@ export class testFunctions {
      * await this.TypeText('input',{hastext:"ola","visible",undefined,{},{timeout: 50})
      *
      */
-    WaitElementLoad = async (
-        element: string,
-        locatorOptions: ILocator = {},
-        stat: TypeElementOptions = "visible",
-        role: elementRole = undefined,
-        optionsRole: IRoleoptions = {},
-        Ioptions: IoptionsPage = { timeout: 60 }
-    ) => {
-        const timeoutSeconds = Ioptions.timeout
-            ? Ioptions.timeout * 1000
-            : 60000
-        if (role === undefined && element !== "") {
-            const handle = await global.page.$(element)
-            await handle?.waitForElementState(stat, {
-                ...Ioptions,
-                timeout: timeoutSeconds,
-            })
-            const result = await global.page.locator(element, locatorOptions)
-            expect(result == null ? false : true).toBeTruthy()
-        } else if (element !== "" && role !== undefined) {
-            const handle = await global.page.$(element)
-            await handle?.waitForElementState(stat, {
-                ...Ioptions,
-                timeout: timeoutSeconds,
-            })
-            const result = await global.page
-                .locator(element, locatorOptions)
-                .getByRole(role, optionsRole)
-            expect(result == null ? false : true).toBeTruthy()
-        } else {
-            throw new Error("Parâmetros inválidos.")
-        }
-    }
+    WaitElementLoad: (element: string, locatorOptions?: ILocator, stat?: TypeElementOptions, role?: elementRole, optionsRole?: IRoleoptions, Ioptions?: IoptionsPage) => Promise<void>;
     /**
      * Valida se o título da página é igual ao texto especificado.
      *
@@ -460,13 +303,7 @@ export class testFunctions {
      * // Valida se o título da página é igual a 'Minha Página'.
      * await ValidateTitle('Minha Página');
      */
-    ValidateTitle = async (textTitle: string) => {
-        const result = async () => {
-            return await global.page.title()
-        }
-        const validadeTitle = (await result()) == textTitle ? true : false
-        await expect(validadeTitle).toBeTruthy()
-    }
+    ValidateTitle: (textTitle: string) => Promise<void>;
     /**
      * Executa uma ação em todos os elementos correspondentes a um seletor.
      *
@@ -480,13 +317,5 @@ export class testFunctions {
      *     await el.click();
      * });
      */
-    ExecuteActionsElements = async (
-        element: string,
-        action: (el: ElementHandle) => Promise<void>
-    ) => {
-        const elements = await global.page.$$(element)
-        for (const el of elements) {
-            await action(el)
-        }
-    }
+    ExecuteActionsElements: (element: string, action: (el: ElementHandle) => Promise<void>) => Promise<void>;
 }
