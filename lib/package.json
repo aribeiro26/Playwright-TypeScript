@@ -1,12 +1,9 @@
 {
-    "name": "playwright.cucumber.template",
+    "name": "playwright.typescript.cucumber",
     "version": "2.0.8",
     "description": "Projeto do playwright com cucumber, teste de regressao visual, teste de acessibilidade e lighthouse integrado",
-    "bin": {
-        "playwright": "templates/scripts/initProjeto.js"
-    },
     "scripts": {
-        "build": "tsc && cp package.json lib/ && cp .eslintrc.js lib/ && cp package-lock.json lib/",
+        "build": "tsc && cp package.json lib/ && cp .eslintrc.js lib/ && cp package-lock.json lib/",        
         "report": "node src/helpers/reporters/ExecReport.ts",
         "test": "./node_modules/.bin/cross-env RETRY=0 DEV=true DESKTOP_ONLY=true RESPONSIVE_ONLY=false NODE_ENV=local ENVA='' ENVB='' PARALLEL=1 TAGS=@Search BRWS='chrome' DEVICE='iPhone 11' ts-node ./app.ts"
     },
@@ -19,8 +16,6 @@
     "author": "alexetec.ribeiro@gmail.com",
     "license": "ISC",
     "devDependencies": {
-        "fs-extra": "^11.1.1",
-        "playwright.cucumber.templater": "^2.0.8",
         "@faker-js/faker": "^8.0.2",
         "@playwright/test": "^1.39.0",
         "@types/chai": "^4.3.5",
