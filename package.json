@@ -1,6 +1,6 @@
 {
     "name": "playwright.typescript.cucumber",
-    "version": "2.0.6",
+    "version": "2.0.8",
     "description": "Projeto do playwright com cucumber, teste de regressao visual, teste de acessibilidade e lighthouse integrado",
     "scripts": {
         "build": "tsc && cp package.json dist/ && cp .eslintrc.js dist/ && cp package-lock.json dist/",        

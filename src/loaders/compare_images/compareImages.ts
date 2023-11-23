@@ -61,10 +61,14 @@ export async function compareToBaseImage(
         return
     }
     const img1 = PNG.sync.read(screenshot)
-    const difference = getDifference(name,img1, baseImage, threshold)
+    const difference = getDifference(name, img1, baseImage, threshold)
     if (difference) {
         await customWorld.attach(difference, "image/png;base64")
-        throw new Error(`Screenshot does not match : ${baseImagePath}`)
+        throw new Error(
+            `Screenshot does not match : ${baseImagePath}${`report/screenshots/${
+                process.platform
+            }/${process.env.BRWS || "chrome"}/${name}_diff.png`}`
+        )
     }
 }
 
